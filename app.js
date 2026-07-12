@@ -12,6 +12,11 @@ app.get("/{*splat}", (req, res) => {
   res.status(400).send("Not found");
 });
 
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(500).send(err);
+});
+
 
 const port = process.env.PORT || 5000;
 app.listen(port, (error) => {

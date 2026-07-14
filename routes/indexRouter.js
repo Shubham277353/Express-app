@@ -1,15 +1,9 @@
 const {Router} = require("express");
-
 const indexRouter = Router();
 
-const userName = "abc";
-const userId = -1;
-
-// indexRouter.get("/", (req, res) => res.send("Welcome to library Manager"));
-
-indexRouter.post("/", (req, res) => {
-    console.log(req.params);
-    res.end();
+indexRouter.get("/", (req, res) => {
+    console.log("Welcome to the site");
+    res.send("Hello world its your boi ksi");
 })
 
 module.exports = indexRouter;
